@@ -16,46 +16,25 @@
 
     <script>
         let users = [];
-        let allowedIPs = [];
 
         // Получаем данные из users.json
         fetch('users.json')
             .then(response => response.json())
             .then(data => {
                 users = data.users;
-                allowedIPs = data.allowedIPs;
             });
 
-        // Функция для получения IP-адреса
-        async function getUserIP() {
-            try {
-                const response = await fetch('https://api.ipify.org?format=json');
-                const data = await response.json();
-                return data.ip;
-            } catch (error) {
-                console.error('Ошибка при получении IP', error);
-                return null;
-            }
-        }
-
-        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const login = document.getElementById('login').value;
             const password = document.getElementById('password').value;
-            const userIP = await getUserIP();
-
-            if (!userIP) {
-                document.getElementById('result').innerText = 'Не удалось получить IP-адрес';
-                return;
-            }
 
             const user = users.find(u => u.login === login && u.password === password);
-            const isIPAllowed = allowedIPs.includes(userIP);
 
-            if (user && isIPAllowed) {
+            if (user) {
                 document.getElementById('result').innerText = 'Успешный вход';
             } else {
-                document.getElementById('result').innerText = 'Неверный логин или пароль, или доступ ограничен';
+                document.getElementById('result').innerText = 'Неверный логин или пароль';
             }
         });
     </script>
