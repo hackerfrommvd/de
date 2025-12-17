@@ -1,0 +1,391 @@
+Гулько:
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Подорожі — Головна</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="head">
+    <img src="img/logo.png" alt="Логотип" class="logo">
+
+    <nav class="menu">
+        <ul class="menu-links">
+            <li class="menu-item">
+                <a href="index.html" class="menu-item-link">Головна</a>
+            </li>
+            <li class="menu-item">
+                <a href="destinations.html" class="menu-item-link">Напрямки</a>
+            </li>
+            <li class="menu-item">
+                <a href="contact.html" class="menu-item-link">Контакти</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-info">
+        <h1 class="hero-title">Ласкаво просимо до світу подорожей!</h1>
+        <p class="hero-text">Відкрийте для себе нові місця та враження!</p>
+    </div>
+</section>
+
+<section class="intro">
+    <h2 class="intro-title">Чому слід обрати нас?</h2>
+
+    <div class="card">
+        <img src="img/card1.jpg" class="card-img">
+        <div class="card-content">
+            <h3 class="card-title">Найкращі напрямки</h3>
+            <ul class="card-list">
+                <li class="card-list-item">Екзотичні острови</li>
+                <li class="card-list-item">Історичні міста</li>
+                <li class="card-list-item">Культурні центри</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/card2.jpg" class="card-img">
+        <div class="card-content">
+            <h3 class="card-title">Індивідуальні тури</h3>
+            <ul class="card-list">
+                <li class="card-list-item">Сімейні тури</li>
+                <li class="card-list-item">Романтичні подорожі</li>
+                <li class="card-list-item">Екстремальні пригоди</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/card3.jpg" class="card-img">
+        <div class="card-content">
+            <h3 class="card-title">Відмінний сервіс</h3>
+            <ul class="card-list">
+                <li class="card-list-item">24/7 підтримка</li>
+                <li class="card-list-item">Зручне бронювання</li>
+                <li class="card-list-item">Гарантована якість</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p class="footer-info">
+        &copy; 2024 Подорожі. Автор: Іванов І.М. Всі права захищено.
+    </p>
+</footer>
+
+</body>
+</html>
+
+Index.html
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Подорожі — Напрямки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="head">
+    <img src="img/logo.png" class="logo">
+    <nav class="menu">
+        <ul class="menu-links">
+            <li class="menu-item"><a href="index.html" class="menu-item-link">Головна</a></li>
+            <li class="menu-item"><a href="destinations.html" class="menu-item-link">Напрямки</a></li>
+            <li class="menu-item"><a href="contact.html" class="menu-item-link">Контакти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="destinations">
+    <h2 class="destinations-title">Популярні напрямки</h2>
+
+    <div class="destinations-container">
+        <div class="destination">
+            <img src="img/paris.jpg" class="destination-img">
+            <h3>Париж, Франція</h3>
+            <p>Романтичні прогулянки та історичні пам'ятки</p>
+        </div>
+
+        <div class="destination">
+            <img src="img/newyork.jpg" class="destination-img">
+            <h3>Нью-Йорк, США</h3>
+            <p>Місто, що ніколи не спить</p>
+        </div>
+
+        <div class="destination">
+            <img src="img/tokyo.jpg" class="destination-img">
+            <h3>Токіо, Японія</h3>
+            <p>Сучасна культура й традиції</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p class="footer-info">&copy; 2024 Подорожі. Всі права захищено.</p>
+</footer>
+
+</body>
+</html>
+
+destinations.html
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Подорожі — Контакти</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="head">
+    <img src="img/logo.png" class="logo">
+    <nav class="menu">
+        <ul class="menu-links">
+            <li class="menu-item"><a href="index.html" class="menu-item-link">Головна</a></li>
+            <li class="menu-item"><a href="destinations.html" class="menu-item-link">Напрямки</a></li>
+            <li class="menu-item"><a href="contact.html" class="menu-item-link">Контакти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contact">
+    <h2 class="contact-title">Контакти</h2>
+
+    <form class="form">
+        <label class="form-label">Ім'я</label>
+        <input type="text" class="form-input">
+
+        <label class="form-label">Електронна пошта</label>
+        <input type="email" class="form-input">
+
+        <label class="form-label">Повідомлення</label>
+        <textarea class="form-textarea"></textarea>
+
+        <button class="form-button">Відправити</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <p class="footer-info">&copy; 2024 Подорожі</p>
+</footer>
+
+</body>
+</html>
+
+contact.html
+
+/* Загальні стилі */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* ===== HEADER ===== */
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 50px;
+    margin-left: 20px;
+}
+
+.menu-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.menu-item {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu-item-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-item-link:hover {
+    color: #ff6f61;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: #fff;
+    background: url("img/hero.jpg") center / cover no-repeat;
+}
+
+.hero-info {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    width: 720px;
+}
+
+.hero-title {
+    font-size: 64px;
+    margin: 0;
+}
+
+.hero-text {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/* ===== INTRO ===== */
+.intro,
+.destinations,
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.intro-title,
+.destinations-title,
+.contact-title {
+    font-size: 40px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+    display: flex;
+    margin: 20px 0;
+    padding: 20px;
+    width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.card-content {
+    text-align: left;
+}
+
+.card-title {
+    margin-top: 0;
+    color: #0073e6;
+}
+
+.card-list {
+    padding: 0;
+    list-style: none;
+}
+
+.card-list-item {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+/* ===== DESTINATIONS ===== */
+.destinations-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.destination {
+    margin: 15px;
+    padding: 20px;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.destination:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.destination-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ===== CONTACT FORM ===== */
+.form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #e55a50;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 100px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+css
